@@ -8,6 +8,8 @@ Gitのインストール
 
 http://git-scm.com/book/ja/v1/使い始める-Gitのインストール
 
+※windows版の詳しいインストール方法はこちらも参照下さい http://opcdiary.net/?page_id=27065
+
 Gitの初期設定
 -----------------
 
