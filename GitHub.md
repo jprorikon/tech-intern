@@ -6,7 +6,7 @@ Gitのインストール
 
 以下の記事を参考にインストールして下さい。（Windows、UNIX/Linux、Mac OS それぞれのインストール方法があります。）
 
-https://github.com/masaru-b-cl/niigata-scm/wiki/Gitのインストール方法
+http://git-scm.com/book/ja/v1/使い始める-Gitのインストール
 
 Gitの初期設定
 -----------------
