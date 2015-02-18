@@ -101,4 +101,4 @@ $ git config --global credential.helper cache --timeout=3600
 
 * [git - 簡単ガイド](http://rogerdudler.github.io/git-guide/index.ja.html) - http://rogerdudler.github.io/git-guide/index.ja.html
 * [Gitを使いこなすための20のコマンド](http://sourceforge.jp/magazine/09/03/16/0831212) - http://sourceforge.jp/magazine/09/03/16/0831212
-* [このマニュアル](https://github.com/zacky-san/GitHub/blob/master/Git簡易マニュアル.md) - https://github.com/zacky-san/GitHub/blob/master/Git簡易マニュアル.md
+* [このマニュアル](https://github.com/tech-sketch/tech-intern/blob/master/GitHub.md) - https://github.com/tech-sketch/tech-intern/blob/master/GitHub.md
