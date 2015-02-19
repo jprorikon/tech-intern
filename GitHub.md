@@ -96,7 +96,7 @@ SourceTreeの場合
 4. 上部のメニューから「設定」を選択
 5. 「リモート」タブ内で「追加」を選択し、以下の内容で設定を行う
   - デフォルトリモート: チェックを入れる
-  - URL/パス: https://github.com/<your_account_name>/<your_repository_name>.git
+  - URL/パス: https://github.com/your_account_name/your_repository_name.git
 
 ### 3. 開発用のディレクトリ上で開発を実施
 
