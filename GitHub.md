@@ -48,16 +48,16 @@ $ sudo port install git-core +svn +doc +bash_completion +gitweb
 Git Clientの初期設定
 --------------------
 
-### Gitコマンドの場合
+Gitコマンドの場合
 
-コミットログに残すユーザ名とメールアドレスを設定
+- コミットログに残すユーザ名とメールアドレスを設定
 
 ```
 $ git config --global user.name "<ユーザ名(英語)>"
 $ git config --global user.email "<メールアドレス>"
 ```
 
-### SourceTreeの場合
+SourceTreeの場合
 
 1. SourceTreeを起動
 2. 利用許諾契約書を確認し、ライセンスに同意して続行
@@ -69,32 +69,38 @@ $ git config --global user.email "<メールアドレス>"
 8. ツール > オプションを開き、全般タブ内のデフォルトユーザー情報欄のフルネーム(英語)、Eメールアドレスを設定
 9. ツール > オプションを開き、Gitタブ内のグローバル無視リスト右側にある「ファイルを編集」を選択し、末尾に「*.stackdump」を追記して保存
 
+
 Gitの操作
 ---------
 
 ### 1. GitHubにインターンシップ用リポジトリを新規作成
 
 - GitHubにログインし、トップページ右側にある「+ New Repository」のボタンを選択
-- Repository name にリポジトリ名(今回作成するアプリの名前等)を入力し、Initialize this repository with a READMEにチェックを入れて「Create Repository」ボタンを実行
+- Repository name にリポジトリ名(今回作成するアプリの名前等)を入力し、「Create Repository」ボタンを実行
 
-### 2. PC側にインターンシップ用リポジトリをClone
+### 2. PC側の開発用ディレクトリで初期設定を実施
 
 Gitコマンドの場合
 
 ```
-$ git clone https://github.com/<your_account_name>/<your_repository_name>.git
+$ cd <your_working_directory>
+$ git init
+$ git remote add origin https://github.com/<your_account_name>/<your_repository_name>.git
 ```
 
 SourceTreeの場合
 
 1. 上部のメニューから「新規/クローンを作成する」を選択
-2. 元のパス/URLの右にある地球儀のマークを選択し、ホストされたリポジトリの一覧から先ほど作成したリポジトリを選択
-3. 作業用のフォルダをデフォルト以外の場所にしたい場合は、保存先のパスとして作業用のフォルダを選択
-4. クローンのボタンを実行
+2. 「リポジトリを作成」のタブを選択
+3. 保存先のパスとして開発用のディレクトリを選択し、作成を実施
+4. 上部のメニューから「設定」を選択
+5. 「リモート」タブ内で「追加」を選択し、以下の内容で設定を行う
+  - デフォルトリモート: チェックを入れる
+  - URL/パス: https://github.com/<your_account_name>/<your_repository_name>.git
 
-### 3. クローンされたディレクトリ上にソースコードが置かれるように開発作業を行う (ファイルの追加・更新)
+### 3. 開発用のディレクトリ上で開発を実施
 
-### 4. 変更内容のきりの良い単位ごとに、変更内容をGitのローカルリポジトリへCommitする
+### 4. 変更内容をGitのローカルリポジトリへCommit
 
 注意: Password, API Key等の公開すべきでない情報が含まれているファイルはCommit対象として選択しないこと
 
@@ -112,18 +118,18 @@ SourceTreeの場合
 2. 上部のメニューから「コミット」を選択
 3. 入力欄に変更内容を説明するコミットメッセージを入力し、「コミット」ボタンを実行
 
-### 5. コミットした変更内容をローカルからGitHubへPushする
+### 5. コミットした変更内容をローカルからGitHubへPush
 
 Gitコマンドの場合
 
 ```
-$ git push orgin master
+$ git push -u orgin master
 ```
 
 SourceTreeの場合
 
 1. 上部のメニューから「プッシュ」を選択
-2. プッシュ先リポジトリを確認し、問題なければ「OK」を選択
+2. プッシュするブランチを選択し、「OK」を選択
 
 
 ### 6. 3に戻り、開発、Commit、Pushを繰り返す
